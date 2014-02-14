@@ -240,12 +240,12 @@ int main(int argc, char *argv[]) {
 		unsigned long saved = compressFile(fin, fout);
 
 		if (isVerbose) {
-			printf("Saved %i Bytes\n", saved);
+			printf("Saved %li Bytes\n", saved);
 		}
 
 		fclose(fin);
 		fclose(fout);
-		system("rm temp.fcode");
+		system("del temp.fcode");
 	}
 
 	return 1;
@@ -363,12 +363,38 @@ void parseG1(char *input, int lineNumber) {
 		// speed in mm per minute
 		double maximum_speed = atof(floatHolder);
 
-		//int a_distance_s = (aTargetSteps - aCurrentSteps);
-		//double a_distance_m = a_distance_s / ASTEPSPERMILIMETER;
+		/*int a_distance_s = (aTargetSteps - aCurrentSteps);
+		double a_distance_m = a_distance_s / ASTEPSPERMILIMETER;*/
 
-		int f = (int) (60000 / (maximum_speed * ASTEPSPERMILIMETER) * 1000);
+		/*int f = (int) (60000 / (maximum_speed * ASTEPSPERMILIMETER) * 1000);
+		printf("Rate: %i\n", f);*/
+		double f = maximum_speed;
 
-		printf("Rate: %i\n", f);
+		int qs[5] = {xCurrentSteps,yCurrentSteps,zCurrentSteps,aCurrentSteps,bCurrentSteps};
+		int ps[5] = {xTargetSteps,yTargetSteps,zTargetSteps,aTargetSteps,bTargetSteps};
+		double zs = fiveDimensionalDistanceInt(qs,ps);
+
+		double qd[5] = {xCurrentSteps / XSTEPSPERMILIMETER,
+			yCurrentSteps / YSTEPSPERMILIMETER,
+			zCurrentSteps/ZSTEPSPERMILIMETER,
+			aCurrentSteps / ASTEPSPERMILIMETER,
+			bCurrentSteps / BSTEPSPERMILIMETER
+		};
+
+		double pd[5] = {
+			xTargetMilimeter,yTargetMilimeter,
+			zTargetMilimeter,aTargetMilimeter,
+			bTargetMilimeter
+		};
+
+		double z = fiveDimensionalDistanceDouble(qd,pd);
+		
+		double goal = (zs * 6000)/(z * f);
+
+
+		stepper_rate = (unsigned long)goal;
+		printf("Goal: %f\n",goal);
+
 
 	}
 
@@ -1008,4 +1034,20 @@ unsigned long compressFile(FILE *ifile, FILE *ofile) {
 	free(file_data);
 	free(compressed);
 	return bytes_saved;
+}
+
+double fiveDimensionalDistanceInt(int q[5],int p[5]){
+	double distance = 0;
+	for(int i=0;i<5;i++){
+		distance += ((q[i] - p[i]) * (q[i] - p[i]));
+	}
+	return pow(distance,0.5);
+}
+
+double fiveDimensionalDistanceDouble(double q[5],double p[5]){
+	double distance = 0;
+	for(int i=0;i<5;i++){
+		distance += ((q[i] - p[i]) * (q[i] - p[i]));
+	}
+	return pow(distance,0.5);
 }

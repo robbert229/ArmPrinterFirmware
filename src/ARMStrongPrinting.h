@@ -29,4 +29,6 @@ void bresenham(int x0, int y0, int z0, int a0, int b0, int x1, int y1, int z1,
 void fwrite32(uint32_t val, FILE *f);
 void write_to_fiq(int x, int y, int z, int a, int b, long speed, FILE *fout);
 int fLineCount(FILE *file);
+double fiveDimensionalDistanceInt(int[5] ,int[5]);
+double fiveDimensionalDistanceDouble(double[5],double[5]);
 unsigned long compressFile(FILE *ifile, FILE *ofile);
