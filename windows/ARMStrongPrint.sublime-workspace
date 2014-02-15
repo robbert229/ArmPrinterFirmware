@@ -1,0 +1,1131 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"veco",
+				"vector5d"
+			],
+			[
+				"vector",
+				"vector5d"
+			],
+			[
+				"bTa",
+				"bTargetMilimeter"
+			],
+			[
+				"aTa",
+				"aTargetMilimeter"
+			],
+			[
+				"zTa",
+				"zTargetMilimeter"
+			],
+			[
+				"yTa",
+				"yTargetMilimeter"
+			],
+			[
+				"xTar",
+				"xTargetMilimeter"
+			],
+			[
+				"x",
+				"XSTEPSPERMILIMETER"
+			],
+			[
+				"dimen",
+				"fiveDimensionalDistance"
+			],
+			[
+				"ARMS",
+				"ARMStrongSplitter"
+			],
+			[
+				"ARM",
+				"ARMStrongFiq"
+			],
+			[
+				"image",
+				"imageNumber"
+			],
+			[
+				"down",
+				"download"
+			],
+			[
+				"gall",
+				"galleryPath"
+			],
+			[
+				"does",
+				"doesDirectoryExist"
+			],
+			[
+				"all",
+				"allSubs"
+			],
+			[
+				"xml",
+				"xmlDoc"
+			],
+			[
+				"file_si",
+				"file_size"
+			],
+			[
+				"scr",
+				"scrapePage"
+			],
+			[
+				"your",
+				"your_string"
+			],
+			[
+				"file_siz",
+				"file_size_dl"
+			],
+			[
+				"file",
+				"file_size"
+			],
+			[
+				"vidoe",
+				"videoDownloadTitle"
+			],
+			[
+				"scrape",
+				"scrapedDirectory"
+			],
+			[
+				"videoDown",
+				"videoDownloadTitle"
+			],
+			[
+				"dow",
+				"download"
+			],
+			[
+				"vide",
+				"videoPageUrl"
+			],
+			[
+				"cont",
+				"content"
+			],
+			[
+				"conte",
+				"content_file"
+			],
+			[
+				"neuron",
+				"neurons"
+			],
+			[
+				"Neuron",
+				"NeuronLayer"
+			],
+			[
+				"n_neuro",
+				"n_neurons_to_hl"
+			],
+			[
+				"n_",
+				"n_neurons_to_hl"
+			],
+			[
+				"n_neu",
+				"n_neurons"
+			],
+			[
+				"n_n",
+				"n_neurons_tohl"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"Instru",
+				"Instruments"
+			],
+			[
+				"index",
+				"indexOfPassion"
+			],
+			[
+				"newPA",
+				"newPassionList"
+			],
+			[
+				"profile",
+				"profiles"
+			],
+			[
+				"rando",
+				"randomLocation"
+			],
+			[
+				"ran",
+				"randomLocation"
+			],
+			[
+				"col",
+				"collidesWithList"
+			],
+			[
+				"sid",
+				"signedIn"
+			],
+			[
+				"messag",
+				"messagesError"
+			],
+			[
+				"threa",
+				"threadsError"
+			],
+			[
+				"create",
+				"createNewThread"
+			],
+			[
+				"parti",
+				"participants"
+			],
+			[
+				"partici",
+				"participants"
+			],
+			[
+				"partic",
+				"participantEmail"
+			],
+			[
+				"thead",
+				"threadID"
+			],
+			[
+				"out",
+				"outputName"
+			],
+			[
+				"allParti",
+				"allParticipantsNamed"
+			],
+			[
+				"allp",
+				"allParticipantsNamed"
+			],
+			[
+				"allPa",
+				"allParticipantsNamed"
+			],
+			[
+				"allPar",
+				"allParticipants"
+			],
+			[
+				"temp",
+				"tempPath"
+			],
+			[
+				"oldP",
+				"oldPhotoPath"
+			],
+			[
+				"orig",
+				"originalFilename"
+			],
+			[
+				"profil",
+				"profilePic"
+			],
+			[
+				"cant",
+				"cantFindTree"
+			],
+			[
+				"account",
+				"accountDoesntExist"
+			],
+			[
+				"sign",
+				"signedIn"
+			],
+			[
+				"bio",
+				"biography"
+			],
+			[
+				"target",
+				"targetEmailDoesntExist"
+			],
+			[
+				"remov",
+				"removeAllPassions"
+			],
+			[
+				"old",
+				"oldEmail"
+			],
+			[
+				"updati",
+				"updatingBio"
+			],
+			[
+				"location",
+				"locationField"
+			],
+			[
+				"loca",
+				"locationField"
+			],
+			[
+				"edit",
+				"editError"
+			],
+			[
+				"isVali",
+				"isValidPassword"
+			],
+			[
+				"permu",
+				"permutes"
+			],
+			[
+				"wor",
+				"wordlist2"
+			],
+			[
+				"worl",
+				"wordlist2"
+			],
+			[
+				"randomNum",
+				"randomNumber1"
+			],
+			[
+				"wordL",
+				"wordlist1"
+			],
+			[
+				"random",
+				"randomNumber2"
+			],
+			[
+				"randomm",
+				"randomNumber1"
+			],
+			[
+				"word",
+				"wordlist1"
+			],
+			[
+				"prod",
+				"PRODUCTION"
+			],
+			[
+				"potent",
+				"potentialConnections"
+			],
+			[
+				"poten",
+				"potentialConnections"
+			],
+			[
+				"pree",
+				"preexistingConnections"
+			],
+			[
+				"login",
+				"loginError"
+			],
+			[
+				"templa",
+				"templateFile"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"font",
+				"FONT	Tag"
+			],
+			[
+				"gen",
+				"generateSalt"
+			],
+			[
+				"generate",
+				"generateSalt"
+			],
+			[
+				"generat",
+				"generateHash"
+			],
+			[
+				"hash",
+				"hashedVariable"
+			],
+			[
+				"init",
+				"initializeMatrix"
+			],
+			[
+				"SCR",
+				"SCREEN_TILES"
+			],
+			[
+				"SCRE",
+				"SCREEN_TILES"
+			],
+			[
+				"SC",
+				"SCREEN_TILES"
+			],
+			[
+				"SCREEN",
+				"SCREEN_HEIGHT"
+			],
+			[
+				"SCREE",
+				"SCREEN_WIDTH"
+			],
+			[
+				"euPer",
+				"euPerSecond"
+			],
+			[
+				"status",
+				"statusValue2"
+			],
+			[
+				"start",
+				"startMASS"
+			],
+			[
+				"stop",
+				"stopMASS"
+			],
+			[
+				"bat",
+				"batbox_4"
+			],
+			[
+				"redsto",
+				"redstone_energy_cell_1"
+			],
+			[
+				"max",
+				"maxMfEnergy"
+			],
+			[
+				"cur",
+				"curMfEnergy"
+			],
+			[
+				"0x",
+				"0xFFFFFF"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"input",
+				"INPUT	Tag"
+			],
+			[
+				"confi",
+				"confirmationCode"
+			],
+			[
+				"confirma",
+				"confirmationFailedToSend"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Discuss the reasons for your academic major and professional plans/goals. Be sure to include items such as previous/current work experience, internships, classroom/lab experience, etc., applicable to your future goals and plans.\n\nReport any significant school/community activities, involvement and awards. Be sure to highlight leadership roles, organizational memberships (including Junior Achievement, professional memberships, etc.), and community service activities. If you are an EWU student and have participated with EWU Clubs & Organizations, please discuss your involvement with these groups as well.\n\nDiscuss any challenges you have faced on your journey to college and how you have overcome them:\n\nDiscuss your plans for funding your higher education costs:\n\nTell why you should be selected for a scholarship:",
+			"settings":
+			{
+				"buffer_size": 819,
+				"line_ending": "Windows",
+				"name": "Discuss the reasons for your academic major and pr"
+			}
+		},
+		{
+			"file": "Makefile",
+			"settings":
+			{
+				"buffer_size": 344,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/ARMStrongPrinting.c",
+			"settings":
+			{
+				"buffer_size": 13625,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/breshenham.c",
+			"settings":
+			{
+				"buffer_size": 5442,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "include/ARMStrongPrinting.h",
+			"settings":
+			{
+				"buffer_size": 1603,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/gcode.c",
+			"settings":
+			{
+				"buffer_size": 8710,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Makefile/Make.sublime-build",
+	"command_palette":
+	{
+		"height": 35.0,
+		"selected_items":
+		[
+			[
+				"inde",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"view",
+				"View In Browser"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"inden",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"format",
+				"Tag: Auto-Format Tags on Document"
+			],
+			[
+				"in",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reing",
+				"Preferences: Settings - Default"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"indn",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"package list",
+				"Package Control: List Packages"
+			],
+			[
+				"package ",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 424.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/coding/ARMStrongPrinting/windows/src/breshenham.c",
+		"/D/coding/ARMStrongPrinting/common/Makefile",
+		"/D/coding/ARMStrongPrinting/windows/bin/lego.gcode",
+		"/D/extra/pdlr/YP/pdlr.py",
+		"/D/coding/ARMStrongPrinting/windows/include/ARMStrongPrinting.h",
+		"/D/coding/ARMStrongPrinting/arm/ARMStrongSplitter.c",
+		"/D/coding/ARMStrongPrinting/Makefile",
+		"/D/coding/ARMStrongPrinting/WIN/Makefile",
+		"/D/coding/3d-printer-arm/armstrong-firmware/armstrong.c",
+		"/D/Programs/apache-ant-1.9.3/README.txt",
+		"/D/Programs/apache-ant-1.9.3/INSTALL",
+		"/D/coding/3d-printer-arm/hotend/main.cpp",
+		"/D/coding/ARMStrongPrinting/bin/fcode/lego.fcode",
+		"/C/Users/johnr_000/AppData/Local/Temp/scp23048/root/3dprinting/lego/source_0.fcode",
+		"/D/coding/3d-printer-arm/steptool/steptool.c",
+		"/C/Users/johnr_000/AppData/Local/Temp/scp37940/mnt/ssd/monsterserver/world/players/jonymog.dat",
+		"/D/coding/ARMStrongPrinting/ARMStrongPrinting.c",
+		"/C/Users/johnr_000/Documents/MCServer",
+		"/D/coding/ARMStrongPrinting/gcode/steampunk_gnome.gcode",
+		"/C/Users/johnr_000/Documents/Moral Subjectivism.pdf",
+		"/D/coding/ARMStrongPrinting/README.md",
+		"/D/coding/ARMStrongGenerator/main.c",
+		"/C/Users/johnr_000/Documents/Moral Subjectivism - Google Drive.pdf",
+		"/D/coding/ARMStrongPrinting - Copy/ARMStrongPrinting.c",
+		"/D/coding/ARMStrongPrinting - Copy/ARMStrongFiq.c",
+		"/D/coding/ARMStrongPrinting/ARMStrongFiq.c",
+		"/D/coding/ARMStrongPrinting/quicklz.h",
+		"/D/arm-2013.11/arm-none-linux-gnueabi/bin/README.txt",
+		"/D/extra/pdlr/pdlr.py",
+		"/C/Program Files (x86)/MegaDev/MD-Trainers/MT-X/readme.txt",
+		"/C/Users/johnr_000/AppData/Local/Temp/7zOF5C3.tmp/patch.txt",
+		"/C/Users/johnr_000/AppData/Local/Temp/7zO56A8.tmp/build.properties",
+		"/G/ScriptingTest/src/mygame/GameObject.java",
+		"/G/ScriptingTest/src/mygame/globals.java",
+		"/C/Users/johnr_000/AppData/Local/Temp/scp02364/mnt/ssd/direserver/server.properties",
+		"/C/Users/johnr_000/AppData/Local/Temp/scp14162/mnt/ssd/monsterserver/server.properties",
+		"/G/ScriptingTest/src/mygame/Main.java",
+		"/D/coding/forge_environment/forge_simplecommands/build.gradle",
+		"/D/coding/forge_environment/forge_simplecommands/bin/mcmod.info",
+		"/D/coding/forge_environment/forge_simplecommands/config/forge.cfg",
+		"/C/Users/johnr_000/AppData/Local/Temp/scp15212/mnt/ssd/monsterserver/ServerStart.sh",
+		"/C/Users/johnr_000/AppData/Local/Temp/scp52192/mnt/ssd/direserver/banned-players.txt",
+		"/D/coding/HoneyBadgerJr/core/output",
+		"/G/ScriptingTest/src/test2.js",
+		"/D/coding/zassion-tree/tree.html",
+		"/D/coding/forge_environment/forgeg/build.gradle",
+		"/D/coding/zassion-dynamic/app.js",
+		"/D/coding/forge_environment/forgeg/Ian's IP",
+		"/D/coding/forge_environment/forgeg/src/main/resources/mcmod.info",
+		"/D/coding/forge_environment/forgeg/src/main/java/com/example/examplemod/ExampleMod.java",
+		"/D/Programs/Minecraft/Direwolf20_1_6_4/minecraft/config/ObsidiPlates.cfg",
+		"/D/coding/forge_environment/forge/mcp/jars/assets/READ_ME_I_AM_VERY_IMPORTANT.txt",
+		"/D/Programs/Minecraft/Direwolf20_1_6_4/minecraft/pack.json",
+		"/D/coding/ForgeGradle/README.md",
+		"/D/coding/forge/mcp/src/minecraft/mcpmod.info",
+		"/D/coding/forge/mcp/src/minecraft/mcmod.info",
+		"/D/coding/forge/other stuff/me/johni0702/nbtbreak/CommonProxy.java",
+		"/D/coding/forge/other stuff/me/johni0702/nbtbreak/NbtBreak.java",
+		"/D/coding/forge/other stuff/me/johni0702/nbtbreak/WandItem.java",
+		"/C/Users/johnr_000/AppData/Local/Temp/7zOA174.tmp/Readme.txt",
+		"/D/coding/forge/other stuff/nbtClone/me/johni0702/nbtbreak/WandItem.java",
+		"/D/coding/forge/other stuff/nbtClone/me/johni0702/nbtbreak/WandItem.jad",
+		"/C/Users/johnr_000/AppData/Local/Temp/7zOF858.tmp/MystAPI.java",
+		"/C/Users/johnr_000/AppData/Local/Temp/7zO6164.tmp/DenseOresEvent.java",
+		"/C/Users/johnr_000/AppData/Local/Temp/7zO3DF2.tmp/#README# cracked by greg0ree.txt",
+		"/D/hackerstuff/slowloris.pl",
+		"/D/Programs/Minecraft/Direwolf20_1_6_4/minecraft/crash-reports/crash-2014-01-23_11.40.20-client.txt",
+		"/D/Programs/Minecraft/Direwolf20_1_6_4/minecraft/crash-reports/crash-2014-01-23_11.59.02-client.txt",
+		"/D/coding/HoneyBadgerJr/core/playerLocation.dat",
+		"/C/Users/JOHNR_~1/AppData/Local/Temp/7zE364.tmp/zshenv",
+		"/C/Users/JOHNR_~1/AppData/Local/Temp/7zOE9FF.tmp/zshrc",
+		"/C/Users/johnr_000/AppData/Local/Temp/7zO673D.tmp/__READ ME.txt",
+		"/D/coding/forge/README-MinecraftForge.txt",
+		"/D/coding/HoneyBadgerJr/core/src/jme3test/helloworld/loadFile.txt",
+		"/D/coding/HoneyBadgerJr/core/playerLocation.dmp",
+		"/D/coding/HoneyBadgerJr/core/src/com/acm/common/player/PlayerGraphics.java",
+		"/D/coding/HoneyBadgerJr/core/src/com/acm/common/player/PlayerFactory.java",
+		"/D/coding/HoneyBadgerJr/core/src/com/acm/common/player/PlayerBehavior.java",
+		"/D/coding/HoneyBadgerJr/core/src/com/acm/common/player/PlayerState.java",
+		"/C/Program Files (x86)/Git/doc/git/html/git-push.html",
+		"/D/coding/HoneyBadgerJr/core/src/com/acm/common/IEntityBehavior.java",
+		"/D/coding/HoneyBadgerJr/core/src/com/acm/common/IEntityGraphics.java",
+		"/D/coding/HoneyBadgerJr/core/src/com/acm/common/Entity.java",
+		"/D/coding/HoneyBadgerJr/core/src/com/acm/common/IEntityState.java",
+		"/C/Users/johnr_000/Desktop/TuesdayNightCampaign.txt",
+		"/D/SteamLibrary/SteamApps/common/Left 4 Dead 2/left4dead2/cfg/360controller.cfg",
+		"/D/extra/Adobe.Creative.Suite.6.Master.Collection-P2P/Install Instruccion..txt",
+		"/D/extra/pdlr/BeautifulSoup.py",
+		"/D/coding/pyhyd/pyhyd.py",
+		"/D/coding/hackthissite/app2win.exe",
+		"/D/Programs/Frhed/Docs/ReadMe.txt",
+		"/D/coding/pyhyd/secret.txt",
+		"/D/Programs/Rust/cfg/server.cfg",
+		"/C/Users/johnr_000/AppData/Local/Temp/7zO57C2.tmp/server.txt",
+		"/D/Programs/Minecraft/direwolfserver/server.properties",
+		"/D/Programs/RustClient/LumaEmu_Steamclient.log",
+		"/D/Programs/RustClient/server.txt",
+		"/D/Programs/Rust/steam_appid.txt",
+		"/D/Programs/Rust/cfg/bans.cfg",
+		"/C/Users/johnr_000/Desktop/TuesdayNightXp",
+		"/C/Users/johnr_000/Desktop/config/denoflionsx/denLibCore/updater.cfg",
+		"/D/extra/The.Hobbit.The.Desolation.of.Smaug.2013.DVDRip/ReadMe.txt",
+		"/C/Users/johnr_000/AppData/Local/Temp/7zO5420.tmp/readme.txt",
+		"/D/extra/The Hobbit 2 The Desolation of Smaug Cam Eng/The Hobbit 2 The Desolation of Smaug Cam Eng.txt",
+		"/C/Users/johnr_000/Documents/Picasa HTML Exports/QmVhdXRpZnVsIGJhYmVzIGdldHRpbmcgd2V0IGxvb2tpbmcgZm9yIGEgY29jayB0byBmdWNrIGF0IERpbmFUaHVtYnMuY29t/index.html",
+		"/C/Users/johnr_000/Desktop/Theodric/theodric.html",
+		"/C/Users/johnr_000/Desktop/Theodric/theodric.js",
+		"/C/Users/johnr_000/Desktop/Theodric/jquery.js",
+		"/C/Users/johnr_000/Desktop/Theodric/Theodric.html",
+		"/C/Users/johnr_000/Desktop/Theodric/Theodric.xml",
+		"/C/Users/johnr_000/Documents/Hero Lab/portfolios/Theodric.xml",
+		"/C/Users/johnr_000/Desktop/Theodric.html",
+		"/C/Users/johnr_000/Documents/Hero Lab/portfolios/Theodric.htm",
+		"/C/Users/johnr_000/Documents/Hero Lab/portfolios/Theodric2.por",
+		"/D/extra/pdlr/beautify.avs",
+		"/D/extra/pdlr/test.html",
+		"/D/extra/pdlr/readme.txt",
+		"/C/Users/johnr_000/Documents/Visual Studio 2013/Projects/HoneyBadger/HoneyBadger/HoneyBadger/HoneyBadger/bin/x86/Debug/map0.dat",
+		"/C/Users/johnr_000/Documents/Visual Studio 2013/Projects/HoneyBadger/HoneyBadger/HoneyBadger/HoneyBadger/bin/x86/Debug/map1.dat",
+		"/D/coding/HoneyBadgerJr/core/src/jme3test/helloworld/player.java",
+		"/C/Users/johnr_000/Documents/Visual Studio 2013/Projects/HoneyBadger/HoneyBadger/HoneyBadger/HoneyBadgerContent/obj/x86/Debug/ContentPipeline.xml",
+		"/D/coding/HoneyBadgerJr/core/src/com/acm/common/PlayerBehavior.java",
+		"/D/coding/HoneyBadgerJr/core/src/com/acm/common/IEntityPhysical.java",
+		"/D/extra/www.Torrenting.com - Doctor_Who_2005.50th_Anniversary_Special.The_Day_of_the_Doctor.HDTV_x264-FoV/First Read This Guide.txt",
+		"/D/coding/HoneyBadgerJr/core/src/jme3test/helloworld/Essentials.java",
+		"/D/coding/HoneyBadgerJr/core/src/jme3test/helloworld/CustomChaseCamera.java",
+		"/D/coding/HoneyBadgerJr-81b5cb02c44ce22edc0ae0fb6e74d2dd7a8b0f75/core/src/jme3test/helloworld/CustomChaseCamera.java",
+		"/D/coding/HoneyBadgerJr-81b5cb02c44ce22edc0ae0fb6e74d2dd7a8b0f75/core/src/jme3test/helloworld/ScriptedSetMGMT.java"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"_pos",
+			">\n",
+			"fiveDimensionalDi",
+			"Printer",
+			"double x = ",
+			"fout",
+			"lz",
+			"extra",
+			"\"rm\"",
+			"rm",
+			"stepper_rate",
+			"};",
+			"fwrite",
+			"isVerbose",
+			"1321",
+			"stepper_rate",
+			"int",
+			"localhost",
+			"Hers",
+			"Channel0",
+			"fast-forward",
+			"acrobat",
+			"2d",
+			"min.map",
+			"totalBytesDownloaded",
+			"fast-forward",
+			"cam",
+			"updateMe",
+			"//",
+			"network_name",
+			"_create_network",
+			">\n",
+			"post(\"other",
+			"89",
+			"font-family",
+			"h1",
+			"andesregular",
+			"index.html",
+			"index",
+			"\"/\", fun",
+			"\"/\", function",
+			"\"/\",function",
+			"\"/\"",
+			"font-family",
+			"									\n",
+			"compare",
+			"console.log",
+			"connections",
+			"intersect(",
+			"createNewThread",
+			"Weigh",
+			"Skating",
+			"subbranches: []",
+			"forEach",
+			"ERROR",
+			"ERROR:",
+			"error",
+			"sendMessage",
+			"console.log",
+			"guid",
+			"setActiveThread",
+			"console.log",
+			"new thread",
+			"go",
+			"profile",
+			"form",
+			"activeThread",
+			"splice",
+			"slice",
+			">\n",
+			"console.log",
+			"read",
+			"./",
+			"dirname",
+			"./views",
+			"fs.readFileSync(\"",
+			"newPath",
+			";\n",
+			"done",
+			"});\n",
+			"console.log",
+			"photo",
+			"fs",
+			"bodyParser",
+			"save",
+			"splice",
+			"email",
+			"newemail",
+			"email",
+			"db",
+			"req",
+			"profile",
+			"console.log",
+			"app.get(\"/passi",
+			"passions.html",
+			"No",
+			"location",
+			"length",
+			"edit.html",
+			".all",
+			"email",
+			"geocode",
+			".find({",
+			"more",
+			"console.log",
+			"connect",
+			"store",
+			"connection",
+			"console",
+			"console.log",
+			"targetEmail",
+			"email",
+			"console",
+			"console.log",
+			"session",
+			"about",
+			"profile",
+			"logout",
+			"db.profiles.",
+			"send",
+			"sendfile",
+			"send",
+			"location",
+			"throw new",
+			"username",
+			"loginError",
+			"login",
+			"users"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Printing",
+			"Channel1",
+			"",
+			"tempPath",
+			"email"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 819,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								229,
+								229
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Discuss the reasons for your academic major and pr",
+							"is_xml": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Makefile",
+					"settings":
+					{
+						"buffer_size": 344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								311,
+								311
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/ARMStrongPrinting.c",
+					"settings":
+					{
+						"buffer_size": 13625,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5309,
+								5309
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2460.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/breshenham.c",
+					"settings":
+					{
+						"buffer_size": 5442,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								380,
+								380
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "include/ARMStrongPrinting.h",
+					"settings":
+					{
+						"buffer_size": 1603,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1168,
+								1168
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 459.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/gcode.c",
+					"settings":
+					{
+						"buffer_size": 8710,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7304,
+								7304
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7614.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 402.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 161.0,
+	"status_bar_visible": true
+}

@@ -8,7 +8,7 @@ VPATH = src:obj:../common/obj:bin
 
 build: ARMStrongPrinting.exe
 
-ARMStrongPrinting.exe: ARMStrongPrinting.o quicklz.o breshenham.o
+ARMStrongPrinting.exe: ARMStrongPrinting.o quicklz.o breshenham.o io.o
 	$(CC) $^ -o bin/ARMStrongPrinting.exe $(LDFLAGS)
 
 %.o: %.c
