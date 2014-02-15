@@ -250,6 +250,21 @@ int main(int argc, char *argv[]) {
 	return 1;
 }
 
+double getUpdateDoubleFromString(double old,char* needle,char* haystack){
+	double value = old;
+	char *place = strstr(haystack, needle);
+	if (place != NULL) {
+		char *start = place + 1;
+		char floatHolder[12];
+		memset(floatHolder, 0, 12);
+		while (*(place++) != ' ' && place != 0) {}
+		strncpy(floatHolder, start, place - start);
+		value = atof(floatHolder);
+	}
+
+	return value;
+}
+
 /* G0 is for moving around quickly, usually not for printing, but rather repositioning. */
 void parseG0(char *input, int lineNumber) {
 	/* At the moment there is no difference between G0 and G1, this is true for most 3d printers. */
@@ -259,83 +274,13 @@ void parseG0(char *input, int lineNumber) {
 /* G1 is the standard code for manuvering while extruding and is the most common command. */
 void parseG1(char *input, int lineNumber) {
 	// stepper_rate is the Micro Seconds Per Step delay. It is the delay that is put into the fiq.
+	
 	static unsigned long stepper_rate = 0;
-	double xTargetMilimeter = x_pos; /* get xAxis from input. */
-	double yTargetMilimeter = y_pos; /* get yAxis from input. */
-	double zTargetMilimeter = z_pos; /* get zAxis from input. */
-	double aTargetMilimeter = a_pos; /* get aAxis from input. */
-	double bTargetMilimeter = b_pos; /* get bAxis from input. */
-
-	// Check to see if any specific axis are being set
-	char *xPlace = strstr(input, "X");
-	if (xPlace == NULL) {
-		xTargetMilimeter = x_pos;
-	} else {
-		char *start = xPlace + 1;
-		char floatHolder[12];
-		memset(floatHolder, 0, 12);
-
-		while (*(xPlace++) != ' ' && *xPlace != 0) {
-		}
-		strncpy(floatHolder, start, xPlace - start);
-		xTargetMilimeter = atof(floatHolder);
-	}
-
-	char *yPlace = strstr(input, "Y");
-	if (yPlace == NULL) {
-		yTargetMilimeter = y_pos;
-	} else {
-		char *start = yPlace + 1;
-		char floatHolder[12];
-		memset(floatHolder, 0, 12);
-
-		while (*(yPlace++) != ' ' && *yPlace != 0) {
-		}
-		strncpy(floatHolder, start, yPlace - start);
-		yTargetMilimeter = atof(floatHolder);
-	}
-
-	char *zPlace = strstr(input, "Z");
-	if (zPlace == NULL) {
-		zTargetMilimeter = z_pos;
-	} else {
-		char *start = zPlace + 1;
-		char floatHolder[12];
-		memset(floatHolder, 0, 12);
-
-		while (*(zPlace++) != ' ' && *zPlace != 0) {
-		}
-		strncpy(floatHolder, start, zPlace - start);
-		zTargetMilimeter = atof(floatHolder);
-	}
-
-	char *aPlace = strstr(input, "E");
-	if (aPlace == NULL) {
-		aTargetMilimeter = a_pos;
-	} else {
-		char *start = aPlace + 1;
-		char floatHolder[12];
-		memset(floatHolder, 0, 12);
-		while (*(aPlace++) != ' ' && *aPlace != 0) {
-		}
-		strncpy(floatHolder, start, aPlace - start);
-		aTargetMilimeter = atof(floatHolder);
-	}
-
-	char *bPlace = strstr(input, "B");
-	if (bPlace == NULL) {
-		bTargetMilimeter = b_pos;
-	} else {
-		char *start = bPlace + 1;
-		char floatHolder[12];
-		memset(floatHolder, 0, 12);
-		while (*(bPlace++) != ' ' && *bPlace != 0) {
-		}
-		strncpy(floatHolder, start, bPlace - start);
-		bTargetMilimeter = atof(floatHolder);
-	}
-
-	// the input is in milimeters per minute, and the output needs to be in milisecond per step
+	double xTargetMilimeter = getUpdateDoubleFromString(x_pos,"X",input);
+	double yTargetMilimeter = getUpdateDoubleFromString(y_pos,"Y",input);
+	double zTargetMilimeter = getUpdateDoubleFromString(z_pos,"Z",input);
+	double aTargetMilimeter = getUpdateDoubleFromString(a_pos,"E",input);
+	double bTargetMilimeter = getUpdateDoubleFromString(b_pos,"B",input);
 
 	int xTargetSteps = xTargetMilimeter * XSTEPSPERMILIMETER;
 	int yTargetSteps = yTargetMilimeter * YSTEPSPERMILIMETER;
@@ -355,25 +300,12 @@ void parseG1(char *input, int lineNumber) {
 		char *start = speedPlace + 1;
 		char floatHolder[16];
 		memset(floatHolder, 0, 16);
-		while (*(speedPlace++) != ' ' && *speedPlace != 0) {
-		}
+		while (*(speedPlace++) != ' ' && *speedPlace != 0) {}
 		strncpy(floatHolder, start, speedPlace - start);
 
 		// speed in mm per minute
 		double maximum_speed = atof(floatHolder);
 
-		/*int a_distance_s = (aTargetSteps - aCurrentSteps);
-		double a_distance_m = a_distance_s / ASTEPSPERMILIMETER;*/
-
-		/*int f = (int) (60000 / (maximum_speed * ASTEPSPERMILIMETER) * 1000);
-		printf("Rate: %i\n", f);*/
-		
-		/*
-		double f = maximum_speed;
-		int qs[5] = {xCurrentSteps,yCurrentSteps,zCurrentSteps,aCurrentSteps,bCurrentSteps};
-		int ps[5] = {xTargetSteps,yTargetSteps,zTargetSteps,aTargetSteps,bTargetSteps};
-		double zs = fiveDimensionalDistanceInt(qs,ps);
-		*/
 		double qd[5] = {
 			xCurrentSteps / XSTEPSPERMILIMETER,
 			yCurrentSteps / YSTEPSPERMILIMETER,
@@ -396,13 +328,14 @@ void parseG1(char *input, int lineNumber) {
 		double c = b / a;
 		double d = c / b;
 		
-		//printf("A: %f mm/min, B: %fmm, C:%f mili, D: %fmili\n",a,b,c,d);
 		//printf("A: %f mm/min, B: %fmm, C:%f mili, D: %imili\n",a,b,c,(int)d);
 		
-		if(d < 150)
-			d = 150;
+		d * 2;
+
+		if(d < MAXSPEED)
+			d = MAXSPEED;
 		
-		stepper_rate = (unsigned long)d * 2;
+		stepper_rate = (unsigned long)d;
 	}
 
 	// Call bresenham, and yes I know I spelled it incorrectly.
@@ -417,92 +350,14 @@ void parseG1(char *input, int lineNumber) {
 	b_pos = bTargetMilimeter;
 }
 
-double getUpdateDoubleFromString(double old,char* needle,char* haystack){
-	double value = old;
-	char *place = strstr(haystack, needle);
-	if (place != NULL) {
-		char *start = place + 1;
-		char floatHolder[12];
-		memset(floatHolder, 0, 12);
-		while (*(place++) != ' ' && place != 0) {}
-		strncpy(floatHolder, start, place - start);
-		value = atof(floatHolder);
-	}
-
-	return value;
-}
-
 // Sets the current position for the specified axes, if no axes or values
 // are specified then the current position is considered 0,0,0
 void parseG92(char *input, int lineNumber) {
-	double newX = x_pos;
-	double newY = y_pos;
-	double newZ = z_pos;
-	double newA = a_pos;
-	double newB = b_pos;
-
-	// Check to see if any of the axis are being set
-	char *xPlace = strstr(input, "X");
-	if (xPlace != NULL) {
-		char *start = xPlace + 1;
-		char floatHolder[12];
-		memset(floatHolder, 0, 12);
-		while (*(xPlace++) != ' ' && xPlace != 0) {
-		}
-		strncpy(floatHolder, start, xPlace - start);
-		newX = atof(floatHolder);
-	}
-
-	char *yPlace = strstr(input, "Y");
-	if (yPlace != NULL) {
-		char *start = yPlace + 1;
-		char floatHolder[12];
-		memset(floatHolder, 0, 12);
-		while (*(yPlace++) != ' ' && yPlace != 0) {
-		}
-		strncpy(floatHolder, start, yPlace - start);
-		newY = atof(floatHolder);
-	}
-
-	char *zPlace = strstr(input, "Z");
-	if (zPlace != NULL) {
-		char *start = zPlace + 1;
-		char floatHolder[12];
-		memset(floatHolder, 0, 12);
-		while (*(zPlace++) != ' ' && zPlace != 0) {
-		}
-		strncpy(floatHolder, start, zPlace - start);
-		newZ = atof(floatHolder);
-	}
-
-	char *aPlace = strstr(input, "E");
-	if (aPlace != NULL) {
-		char *start = aPlace + 1;
-		char floatHolder[12];
-		memset(floatHolder, 0, 12);
-		while (*(aPlace++) != ' ' && aPlace != 0) {
-		}
-		strncpy(floatHolder, start, aPlace - start);
-		newA = atof(floatHolder);
-	}
-
-	char *bPlace = strstr(input, "B");
-	if (bPlace != NULL) {
-		char *start = bPlace + 1;
-		char floatHolder[12];
-		memset(floatHolder, 0, 12);
-		while (*(bPlace++) != ' ' && bPlace != 0) {
-		}
-		strncpy(floatHolder, start, bPlace - start);
-		newB = atof(floatHolder);
-	}
-
-	// Set the axis to the new settings.
-	x_pos = newX;
-	y_pos = newY;
-	z_pos = newZ;
-	a_pos = newA;
-	b_pos = newB;
+	x_pos = getUpdateDoubleFromString(x_pos,"X",input);
+	y_pos = getUpdateDoubleFromString(y_pos,"Y",input);
+	z_pos = getUpdateDoubleFromString(z_pos,"Z",input);
+	a_pos = getUpdateDoubleFromString(a_pos,"E",input);
+	b_pos = getUpdateDoubleFromString(b_pos,"B",input);
 }
 
 /* Moves the specified axis to the origin. If no axes are specified then all of the axes are centered. */
@@ -536,7 +391,6 @@ void parseG28(char *input, int lineNumber) {
 	}
 
 	// Converts gcode format (Milimeters) to my format (Steps)
-
 	int xTargetSteps = xTargetMilimeter * XSTEPSPERMILIMETER;
 	int yTargetSteps = yTargetMilimeter * YSTEPSPERMILIMETER;
 	int zTargetSteps = zTargetMilimeter * ZSTEPSPERMILIMETER;
@@ -550,7 +404,6 @@ void parseG28(char *input, int lineNumber) {
 	int bCurrentSteps = b_pos * BSTEPSPERMILIMETER;
 
 	// Calls the incorrectly named algorithm
-
 	bresenham(xCurrentSteps, yCurrentSteps, zCurrentSteps, aCurrentSteps,
 			bCurrentSteps, xTargetSteps, yTargetSteps, zTargetSteps,
 			aTargetSteps, bTargetSteps, 0x000000F0, fout);
