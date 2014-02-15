@@ -368,34 +368,38 @@ void parseG1(char *input, int lineNumber) {
 
 		/*int f = (int) (60000 / (maximum_speed * ASTEPSPERMILIMETER) * 1000);
 		printf("Rate: %i\n", f);*/
+		
+		/*
 		double f = maximum_speed;
-
 		int qs[5] = {xCurrentSteps,yCurrentSteps,zCurrentSteps,aCurrentSteps,bCurrentSteps};
 		int ps[5] = {xTargetSteps,yTargetSteps,zTargetSteps,aTargetSteps,bTargetSteps};
 		double zs = fiveDimensionalDistanceInt(qs,ps);
-
-		double qd[5] = {xCurrentSteps / XSTEPSPERMILIMETER,
+		*/
+		double qd[5] = {
+			xCurrentSteps / XSTEPSPERMILIMETER,
 			yCurrentSteps / YSTEPSPERMILIMETER,
-			zCurrentSteps/ZSTEPSPERMILIMETER,
+			zCurrentSteps / ZSTEPSPERMILIMETER,
 			aCurrentSteps / ASTEPSPERMILIMETER,
 			bCurrentSteps / BSTEPSPERMILIMETER
 		};
 
 		double pd[5] = {
-			xTargetMilimeter,yTargetMilimeter,
-			zTargetMilimeter,aTargetMilimeter,
+			xTargetMilimeter,
+			yTargetMilimeter,
+			zTargetMilimeter,
+			aTargetMilimeter,
 			bTargetMilimeter
 		};
 
 		double z = fiveDimensionalDistanceDouble(qd,pd);
-		
-		double goal = (zs * 6000)/(z * f);
-
-
-		stepper_rate = (unsigned long)goal;
-		printf("Goal: %f\n",goal);
-
-
+		double a = maximum_speed / 60000.0;
+		double b = z;
+		double c = b / a;
+		double d = c / b;
+		//printf("A: %f mm/min, B: %fmm, C:%f mili, D: %fmili\n",a,b,c,d);
+		//printf("A: %f mm/min, B: %fmm, C:%f mili, D: %imili\n",a,b,c,(int)d);
+		if(d < 150) d = 150;
+		stepper_rate = (unsigned long)d * 2;
 	}
 
 	// Call bresenham, and yes I know I spelled it incorrectly.
