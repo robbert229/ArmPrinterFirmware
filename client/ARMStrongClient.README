@@ -1,0 +1,7 @@
+ARMStrongClient
+	1. Gets cfcode, or fcode(goto 3)
+	2. decompress cfcode
+	3. if descriptor exists(goto 5)
+	4. generate descriptor
+	5. split into partitions
+	6. print

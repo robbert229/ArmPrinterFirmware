@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <quicklz.h>
 #include <stdint.h>
-#include <ARMStrongPrinting.h>
+#include <ARMStrongHost.h>
 
 
 // Swaps MSB LSB

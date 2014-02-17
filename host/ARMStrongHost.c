@@ -101,7 +101,7 @@
 #include <unistd.h>
 #include <ctype.h>
 #include <getopt.h>
-#include <ARMStrongPrinting.h>
+#include <ARMStrongHost.h>
 
 #define COMMANDBUFLEN 128
 
@@ -330,7 +330,7 @@ void parseG1(char *input, int lineNumber) {
 		
 		//printf("A: %f mm/min, B: %fmm, C:%f mili, D: %imili\n",a,b,c,(int)d);
 		
-		d * 2;
+		d *= 2;
 
 		if(d < MAXSPEED)
 			d = MAXSPEED;

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <ARMStrongPrinting.h>
+#include <ARMStrongHost.h>
 
 // The incorrectly named algorithm that approximates a line on 5 dimensions. There are no differences between axis. This allows multiple extruders to be added easily.
 void bresenham(int x0, int y0, int z0, int a0, int b0, int x1, int y1, int z1,
