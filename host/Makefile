@@ -18,14 +18,13 @@ ALLFILES := $(SOURCES)
 build:    $(EXE)
 
 $(EXE): $(OBJECTS)
-	@$(CC) $^ -o $@ $(LDFLAGS)
-	@echo "CC:$@"
+	$(CC) $^ -o $@ $(LDFLAGS)
 
 $(OBJDIR)%$(OFILES):    %$(SFILES)
-	@$(CC) $(CFLAGS) $< -o $@
-	@echo "CC:$@"
+	$(CC) $(CFLAGS) $< -o $@
 
-clean:clean_obj build
-clean_obj:
-	@-rm -f $(OBJECTS) $(EXE)
-	@echo "Cleaned"
+clean:
+	-rm -f $(OBJECTS) $(EXE)
+	
+test:
+	$(MAKE) -C bin test

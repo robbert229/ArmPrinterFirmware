@@ -244,7 +244,7 @@ int main(int argc, char *argv[]) {
 
 		fclose(fin);
 		fclose(fout);
-		system("del temp.fcode");
+		system("rm temp.fcode");
 	}
 
 	return 1;
@@ -339,7 +339,7 @@ void parseG1(char *input, int lineNumber) {
 	}
 
 	// Call bresenham, and yes I know I spelled it incorrectly.
-	bresenham(xCurrentSteps, yCurrentSteps, zCurrentSteps, aCurrentSteps,
+	breshenham(xCurrentSteps, yCurrentSteps, zCurrentSteps, aCurrentSteps,
 			bCurrentSteps, xTargetSteps, yTargetSteps, zTargetSteps,
 			aTargetSteps, bTargetSteps, stepper_rate, fout);
 
@@ -404,7 +404,7 @@ void parseG28(char *input, int lineNumber) {
 	int bCurrentSteps = b_pos * BSTEPSPERMILIMETER;
 
 	// Calls the incorrectly named algorithm
-	bresenham(xCurrentSteps, yCurrentSteps, zCurrentSteps, aCurrentSteps,
+	breshenham(xCurrentSteps, yCurrentSteps, zCurrentSteps, aCurrentSteps,
 			bCurrentSteps, xTargetSteps, yTargetSteps, zTargetSteps,
 			aTargetSteps, bTargetSteps, 0x000000F0, fout);
 }

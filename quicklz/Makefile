@@ -7,6 +7,9 @@ VPATH=
 
 build: libquicklzarm.a libquicklzwin.a
 
+clean: 
+	-rm -f quicklzarm.o quicklzwin.o libquicklzarm.a libquicklzwin.a
+
 libquicklzarm.a: quicklzarm.o
 	$(CROSS)$(AR) -cvq libquicklzarm.a quicklzarm.o
 
