@@ -101,6 +101,8 @@
 #include <unistd.h>
 #include <ctype.h>
 #include <getopt.h>
+#include <quicklz.h>
+#include <PrinterConfig.h>
 #include <ARMStrongHost.h>
 
 #define COMMANDBUFLEN 128
@@ -145,7 +147,7 @@ int main(int argc, char *argv[]) {
 	if (optind < argc || argc == 1) {
 		printf("\n%s: invalid usage\n", argv[0]);
 		printf(
-				"\nusage: %s [-i INPUT -o OUTPUT -v -c]\n\nparses gcode into fcode or cfcode\n\n",
+				"\nusage: %s [-i INPUT -o OUTPUT -v -c]\nparses gcode into fcode or cfcode\n",
 				argv[0]);
 		printf("\t\t-o OUTPUT\t\tthe file to write to\n");
 		printf("\t\t-i INPUT\t\tthe file to read from\n");
@@ -409,6 +411,7 @@ void parseG28(char *input, int lineNumber) {
 			aTargetSteps, bTargetSteps, 0x000000F0, fout);
 }
 
+
 double fiveDimensionalDistanceInt(int q[5],int p[5]){
 	double distance = 0;
 	for(int i=0;i<5;i++){
@@ -423,4 +426,41 @@ double fiveDimensionalDistanceDouble(double q[5],double p[5]){
 		distance += ((q[i] - p[i]) * (q[i] - p[i]));
 	}
 	return pow(distance,0.5);
+}
+
+#if(QLZ_STREAMING_BUFFER == 0)
+#error Define QLZ_STREAMING_BUFFER to a non-zero value for this demo
+#endif
+
+// Stolen from quicklz site. http://www.quicklz.com/stream_compress.c. It compresses the input, and returns the amount of bytes saved.
+// Quicklz is awesome. It is not bloated, does the job quickly, compresses well, and is free.
+unsigned long compressFile(FILE *ifile, FILE *ofile) {
+	char *file_data, *compressed;
+	size_t d, c;
+	unsigned long bytes_saved = 0;
+	qlz_state_compress *state_compress = (qlz_state_compress *) malloc(
+			sizeof(qlz_state_compress));
+
+	// allocate "uncompressed size" + 400 bytes for the destination buffer where
+	// "uncompressed size" = 10000 in worst case in this sample demo
+	file_data = (char *) malloc(10000);
+	compressed = (char *) malloc(10000 + 400);
+
+	// allocate and initially zero out the states. After this, make sure it is
+	// preserved across calls and never modified manually
+	memset(state_compress, 0, sizeof(qlz_state_compress));
+
+	// compress the file in random sized packets
+	while ((d = fread(file_data, 1, rand() % 10000 + 1, ifile)) != 0) {
+		c = qlz_compress(file_data, compressed, d, state_compress);
+		//printf("%u bytes compressed into %u\n", (unsigned int)d, (unsigned int)c);
+		bytes_saved += ((unsigned int) d - (unsigned int) c);
+		// the buffer "compressed" now contains c bytes which we could have sent directly to a
+		// decompressing site for decompression
+		fwrite(compressed, c, 1, ofile);
+	}
+
+	free(file_data);
+	free(compressed);
+	return bytes_saved;
 }

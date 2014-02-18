@@ -7,9 +7,9 @@ EXE     := $(BINDIR)$(NAME)
 SFILES  := c
 OFILES  := o
 CC      := gcc
-INC		:= -I. -I../quicklz
+INC		:= -I. -I../quicklz -I../fio -I../
 CFLAGS  := -c -Wall -std=c99 $(INC)
-LDFLAGS := -L../quicklz -lquicklzwin
+LDFLAGS := -L../quicklz -lquicklzwin -L../fio -lfiowin
 SOURCES := $(wildcard *.$(SFILES))
 OBJECTS := $(patsubst %$(SFILES), $(OBJDIR)%$(OFILES), $(SOURCES))
 
@@ -26,5 +26,3 @@ $(OBJDIR)%$(OFILES):    %$(SFILES)
 clean:
 	-rm -f $(OBJECTS) $(EXE)
 	
-test:
-	$(MAKE) -C bin test
