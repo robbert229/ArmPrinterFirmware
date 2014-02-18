@@ -1,2 +1,4 @@
 *.fcode
 *.cfcode
+.cproject
+.settings
